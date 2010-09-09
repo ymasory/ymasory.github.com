@@ -30,7 +30,7 @@ div#header {
     overflow: hidden;
     background: #BBD9EE;
 }
-div#header h1,div#menu {
+div#header h1, div#menu {
     width: 770px;
     margin: 0 auto;
     text-align: left
@@ -41,7 +41,7 @@ div#header h1{
 }
 
 
-ul#nav,ul#nav li {
+ul#nav, ul#nav li {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -70,7 +70,7 @@ ul#nav a:hover {
     background: #fff;
     color: #000;
 }
-ul#nav li.activelink a,ul#nav li.activelink a:hover {
+ul#nav li.activelink a, ul#nav li.activelink a:hover {
     background: #FFF;
     color: #003;
 }
