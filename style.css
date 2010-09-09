@@ -85,6 +85,7 @@ ul#nav li.activelink a, ul#nav li.activelink a:hover {
     width:78%;
 }
 #right {
+    text-align: right;
     float:right;
     width:20%;
 }
