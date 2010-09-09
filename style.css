@@ -22,3 +22,15 @@ ul#nav li{float:left;margin-left: 3px;text-align: center}
 ul#nav a{float:left;width: 95px;padding: 5px 0;background: #E7F1F8;text-decoration:none;color: #666; border-top : 1px solid #fff; border-left : 1px solid #fff; border-right : 1px solid #fff;}
 ul#nav a:hover{background: #fff;color: #000}
 ul#nav li.activelink a,ul#nav li.activelink a:hover{background: #FFF;color: #003}
+
+#wrap {
+    height:300px;
+}
+#left {
+    float:left;
+    width:80%;
+}
+#right {
+    float:right;
+    width:20%;
+}
