@@ -15,8 +15,9 @@ object GenerateHtml {
   val PartialFile = "flashcards.html.part"
 
   def main(args: Array[String]) {
+    val fileSorter = {(fst: File, snd: File) => fst.getName < snd.getName}
     val pwd = new File(System.getenv().get("ymas") + Sep + FlashcardsDir)
-    val subdirs = pwd.listFiles filter (file => file.isDirectory && file.isHidden == false)
+    val subdirs = pwd.listFiles.filter(file => file.isDirectory && file.isHidden == false) sortWith fileSorter
     val metaPred = {(file: File) => new File(file, MetaFilename).exists}
     val (metas, nots) = subdirs partition metaPred
     if (nots.isEmpty == false) {
@@ -38,7 +39,7 @@ object GenerateHtml {
 """.trim)
 
     for {dir <- metas
-         deck <- dir.listFiles.sortWith((fst, snd) => fst.getName < snd.getName)
+         deck <- dir.listFiles sortWith fileSorter
          name = deck.getName
          if name.endsWith("." + FlashupExt)} {
       val lines = Source.fromFile(new File(dir, MetaFilename)).getLines.toList
