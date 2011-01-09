@@ -12,6 +12,7 @@ object GenerateHtml {
   val FrontsSuffix = "-fronts"
   val BacksSuffix= "-backs"
   val FlashcardsDir = "PublicFlashcards"
+  val PartialFile = "flashcards.html.part"
 
   def main(args: Array[String]) {
     val pwd = new File(System.getenv().get("ymas") + Sep + FlashcardsDir)
@@ -63,6 +64,10 @@ object GenerateHtml {
 
     buf.append("</table>")
 
-    println(buf.toString)
+    val tableHtml = buf.toString
+
+    val partialHtml = Source.fromFile(PartialFile).getLines.mkString
+    val fullHtml = partialHtml.replaceAll("INSERT TABLE HERE", tableHtml)
+    println(fullHtml)
   }
 }
