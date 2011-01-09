@@ -26,7 +26,7 @@ object GenerateHtml {
     }
 
     val buf = new StringBuffer
-    buf.append("<table id=\"allflashcards\">")
+    buf.append("<table id=\"allflashcards\" border=\"1\" cellpadding=\"10\">")
     buf.append("""
 <tr> 
 <th><b>Deck</b></th> 

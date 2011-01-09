@@ -89,12 +89,3 @@ ul#nav li.activelink a, ul#nav li.activelink a:hover {
     float:right;
     width:20%;
 }
-#allflashcards {
-    border: 1;
-    cellpadding: 10;
-    
-}
-.flashcardfile {
-    align: left;
-    valign: center;
-}
