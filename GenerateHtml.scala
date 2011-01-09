@@ -11,19 +11,21 @@ object GenerateHtml {
   val Sep = "/"
   val FrontsSuffix = "-fronts"
   val BacksSuffix= "-backs"
+  val FlashcardsDir = "PublicFlashcards"
 
-  val pwd = new File(System.getProperty("user.dir"))
+  val pwd = new File(System.getenv().get("ymas") + FlashcardsDir)
   val subdirs = pwd.listFiles filter (file => file.isDirectory && file.isHidden == false)
 
   val metaPred = {(file: File) => new File(file, MetaFilename).exists}
-  val (metas, nots) = subdirs partition metaPred
-  if (nots.isEmpty == false) {
-    System.err println "no meta file found for: "
-    nots foreach System.err.println
-    exit(1)
-  }
 
   def main(args: Array[String]) {
+    val (metas, nots) = subdirs partition metaPred
+    if (nots.isEmpty == false) {
+      System.err println "no meta file found for: "
+      nots foreach System.err.println
+      exit(1)
+    }
+
     val buf = new StringBuffer
     buf.append("<table id=\"allflashcards\">")
     buf.append("""
@@ -62,7 +64,6 @@ object GenerateHtml {
     }
 
     buf.append("</table>")
-    out close()
 
     buf.append(buf.toString)
   }
