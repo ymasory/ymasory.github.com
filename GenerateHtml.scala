@@ -51,7 +51,7 @@ object GenerateHtml {
         case Some(str) => " href=\"" + str + "\""
         case None => ""
       }
-      buf.append("<td class=\"flashcardfile" + href + "\">" + title + "</td>")
+      buf.append("<td class=\"flashcardfile\"><a" + href + ">" + title + "</a></td>")
       def printLink(in: String) {
         buf.append("<td><a href=\"" + UrlPrefix + dir.getName + Sep + in + "\">link</a></td>")
       }
