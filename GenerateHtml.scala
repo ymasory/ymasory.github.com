@@ -38,7 +38,7 @@ object GenerateHtml {
 """.trim)
 
     for {dir <- metas
-         deck <- dir.listFiles
+         deck <- dir.listFiles.sortWith((fst, snd) => fst.getName < snd.getName)
          name = deck.getName
          if name.endsWith("." + FlashupExt)} {
       val lines = Source.fromFile(new File(dir, MetaFilename)).getLines.toList
