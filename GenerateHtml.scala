@@ -46,13 +46,14 @@ object GenerateHtml {
       val title = lines(0)
       val url = if (lines.length > 1) Some(lines(1)) else None
       val basename = name.split("\\.").head
+      val prettyName = basename replaceAll ("_", " ")
 
       buf.append("<tr>")
       val href = url match {
         case Some(str) => " href=\"" + str + "\""
         case None => ""
       }
-      buf.append("<td class=\"flashcardfile\"><a" + href + ">" + title + "</a></td>")
+      buf.append("<td class=\"flashcardfile\"><a" + href + ">" + title + "</a>, " + prettyName + "</td>")
       def printLink(in: String) {
         buf.append("<td><a href=\"" + UrlPrefix + dir.getName + Sep + in + "\">link</a></td>")
       }
