@@ -68,7 +68,7 @@ object GenerateHtml {
 
     val tableHtml = buf.toString
 
-    val partialHtml = Source.fromFile(PartialFile).getLines.mkString
+    val partialHtml = Source.fromFile(PartialFile).getLines.mkString("\n")
     val fullHtml = partialHtml.replaceAll("INSERT TABLE HERE", tableHtml)
     println(fullHtml)
   }
