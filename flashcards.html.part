@@ -31,6 +31,11 @@
         <p>
           I welcome feedback on the visual appearance of the PDFs, or on the flashup markup language. I also appreciate notifications of typos or mistakes in the cards themselves.
         </p>
+      <div style="border:1px solid red; padding-left:25px; padding-right:25px">
+        <p>
+          To avoid copyright issues I strive to avoid quoting the source material directly except when published under an open source license. My cards for Programming in Scala are an exception. They quote the book extensively and are released here with prior permission from Artima. Please purchase a copy of <a href="http://www.artima.com/shop/programming_in_scala_2ed">Programming in Scala, 2e</a>. It's <a href="http://www.amazon.com/Programming-Scala-Comprehensive-Step-step/product-reviews/0981531601/ref=cm_cr_dp_synop?ie=UTF8&showViewpoints=0&sortBy=bySubmissionDateDescending#R1MBV6U1GLWKMR">one of my favorites</a>.
+        </p>
+      </div>
       </div>
 
       <div id="right">
