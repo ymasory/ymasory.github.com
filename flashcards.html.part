@@ -42,7 +42,7 @@
         </p>
         <p>
           I print directly on index cards. I will be adding an 8.5" x 11" output mode for printing on standard paper or the <a href="http://www.amazon.com/Avery-Laser-White-Index-Cards/dp/B00006HPWA/">expensive perforated kind</a>.
-          Files in <a href="http://ankisrs.net/">Anki's</a> format is also provided so you can study on Linux, Mac, Windows, Android, and iPhone. <strong>Anki support is experimental.</strong>
+          Files importable by <a href="http://ankisrs.net/">Anki</a> and <a href="http://www.mnemosyne-proj.org/">Mnemosyne</a> are also provided so you can study on Linux, Mac, Windows, Android, and iPhone. <strong>Anki support is experimental.</strong>
         </p>
         <p>
           I welcome feedback on the visual appearance of the PDFs, or on the flashup markup language. I also appreciate notifications of typos or mistakes in the cards themselves.
