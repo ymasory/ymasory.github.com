@@ -35,7 +35,7 @@ object GenerateHtml {
 <th><b>3"x5"</b></th> 
 <th><b>3"x5" Fronts</b></th> 
 <th><b>3"x5" Backs</b></th> 
-<th><b><a href="http://ankisrs.net/">Anki</a> (experimental!)</b></th>
+<th><b>Anki</b></th>
 <th><b>Source</b></th> 
 </tr>
 """.trim)
