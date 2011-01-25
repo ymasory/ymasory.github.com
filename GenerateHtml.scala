@@ -8,6 +8,7 @@ object GenerateHtml {
   val FlashupExt = "flashup"
   val PdfDir = "bin"
   val PdfExt = "pdf"
+  val AnkiExt = "txt"
   val Sep = "/"
   val FrontsSuffix = "-fronts"
   val BacksSuffix= "-backs"
@@ -34,6 +35,7 @@ object GenerateHtml {
 <th><b>3"x5"</b></th> 
 <th><b>3"x5" Fronts</b></th> 
 <th><b>3"x5" Backs</b></th> 
+<th><b><a href="http://ankisrs.net/">Anki</a></b></th>
 <th><b>Source</b></th> 
 </tr>
 """.trim)
@@ -60,6 +62,7 @@ object GenerateHtml {
       printLink(PdfDir + Sep + basename + "." + PdfExt)
       printLink(PdfDir + Sep + basename + FrontsSuffix + "." + PdfExt)
       printLink(PdfDir + Sep + basename + BacksSuffix + "." + PdfExt)
+      printLink(PdfDir + Sep + basename + "." + AnkiExt)
       printLink(basename + "." + FlashupExt)
       buf.append("</tr>")
     }
