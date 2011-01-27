@@ -3,12 +3,14 @@ import scala.io._
 
 object GenerateHtml {
 
+  val Dot = "."
   val MetaFilename = ".flashcardset"
   val UrlPrefix = "http://github.com/ymasory/PublicFlashcards/raw/master/"
   val FlashupExt = "flashup"
   val PdfDir = "bin"
   val PdfExt = "pdf"
-  val AnkiExt = "txt"
+  val AnkiSuff = "-anki.txt"
+  val MnemoSuff = "-mnemosyne.txt"
   val Sep = "/"
   val FrontsSuffix = "-fronts"
   val BacksSuffix= "-backs"
@@ -35,7 +37,8 @@ object GenerateHtml {
 <th><b>3"x5"</b></th> 
 <th><b>3"x5" Fronts</b></th> 
 <th><b>3"x5" Backs</b></th> 
-<th><b>Anki/Mnemosyne</b></th>
+<th><b>Anki</b></th>
+<th><b>Mnemosyne</b></th>
 <th><b>Source</b></th> 
 </tr>
 """.trim)
@@ -59,11 +62,12 @@ object GenerateHtml {
       def printLink(in: String) {
         buf.append("<td><a href=\"" + UrlPrefix + dir.getName + Sep + in + "\">link</a></td>")
       }
-      printLink(PdfDir + Sep + basename + "." + PdfExt)
-      printLink(PdfDir + Sep + basename + FrontsSuffix + "." + PdfExt)
-      printLink(PdfDir + Sep + basename + BacksSuffix + "." + PdfExt)
-      printLink(PdfDir + Sep + basename + "." + AnkiExt)
-      printLink(basename + "." + FlashupExt)
+      printLink(PdfDir + Sep + basename + Dot + PdfExt)
+      printLink(PdfDir + Sep + basename + FrontsSuffix + Dot + PdfExt)
+      printLink(PdfDir + Sep + basename + BacksSuffix + Dot + PdfExt)
+      printLink(PdfDir + Sep + basename +  AnkiSuff)
+      printLink(PdfDir + Sep + basename + MnemoSuff)
+      printLink(basename + Dot + FlashupExt)
       buf.append("</tr>")
     }
 
