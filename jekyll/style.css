@@ -1,0 +1,249 @@
+@import url("http://fonts.googleapis.com/css?family=PT+Sans+Caption:regular,bold");
+/* AUTHORS: Nick ?, Brian Clapper, Yuvi Masory */
+
+
+/*
+   ---------------------------------------------------------------------------
+   GENERAL
+   ---------------------------------------------------------------------------
+*/
+body {
+    /* limit page width */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+/*    background-color:#2E4A6B; */
+    font-size: 12pt;
+    line-height: 1.5em;
+}
+div#footer {
+    width: 100%;
+    font-size: 12pt;
+    color: #555555;
+    background-color: white;
+    padding: 0;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+h1 {
+    font-size: 1.6em;
+    color: #2E4A6B;
+}
+h2 {
+    font-size: 1.6em;
+}
+h3 {
+    font-size: 1.2em;
+}
+a, a:visited {
+    /* remove link underlining */
+    text-decoration: none;
+    color:#2E4A6B;
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+strong {
+    font-weight: bold;
+}
+div#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background-color:#FFF;
+    padding-bottom:20px;
+}
+div#main {
+    padding-left:60px;
+    padding-right:60px;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    border: 1px solid #999999;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+div#main p {
+  padding-left:20px;
+}
+img {
+    border: none;
+}
+img#logo {
+
+    float: left;
+    position: relative;
+    left: 100px;
+    bottom: 20px;
+    /* vertical-align: bottom; */
+    /* position: absolute; */
+    /* left: 20px; */
+    /* top: 20px; */
+}
+div#main h1 {
+/*  background-color: #2E4A6B; */
+
+  /* Gradient: fallback */
+  background-color: #2E4A6B;
+  background-image: url('http://scalathon.org/img/header_bg.png');
+  background-repeat: repeat-y;
+  
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, #2E4A6B, #FFFFFF);
+  
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, left top, right top, from(#2E4A6B), to(#FFFFFF));
+  
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-linear-gradient(left, #2E4A6B, #FFFFFF);
+  
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, #2E4A6B, #FFFFFF);
+
+  color:#FFF;
+  font-family: 'PT Sans Caption';
+  padding:5px;
+  padding-left:10px;
+  margin-bottom:10px;
+  margin-top:15px;
+  width:60%;
+}
+dl {
+    padding-left: 20px;
+}
+div#main h3 {
+    font-style: italic;
+}
+div.overview {
+    margin-bottom: 40px;
+}
+br.simple-line-break {
+    line-height: 0.25em;
+}
+/* END GENERAL */
+
+/*
+   ---------------------------------------------------------------------------
+   HEADER
+   ---------------------------------------------------------------------------
+*/
+div#header {
+    padding-bottom: 20px;
+    padding-top:10px;
+    overflow:auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    align: center;
+}
+div#header h1 {
+    font-family: 'PT Sans Caption', arial, serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom:10px;
+}
+div#header h2 {
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1em;
+    padding-bottom:20px;
+}
+
+div#title-logo {
+}
+
+div#menu {
+    margin-top: -30px;
+    width: 100%;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+}
+
+ul#nav {
+    list-style-type: none;
+}
+ul#nav li {
+    float: left;
+    text-align:center;
+}
+ul#nav a {
+    font-family: 'PT Sans Caption';
+    display: block;
+    width: 130px;
+    font-size: 10pt;
+    background-color: white;
+    color: #2E4A6B;
+    padding:10px 0px;
+
+    border-right: 1px solid #999999;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+}
+
+ul#nav a.first {
+    border-left: 1px solid #999999;
+}
+
+div#header ul#nav a:hover {
+    color: #ffffff;
+    background: #2E4A6B;
+}
+
+ul#nav a.selected {
+    color: #2E4A6B;
+    background: #ffeeca;
+}
+/* END HEADER */
+
+
+/*
+   ---------------------------------------------------------------------------
+   DROP SHADOW
+   ---------------------------------------------------------------------------
+*/
+.drop-shadow {
+    /*
+       Box shadow. Parameters:
+
+       1: horizontal offset (can be negative)
+       2: vertical offset (can be negative)
+       3: shadow blur (must be non-negative)
+       4: blur color
+
+       See http://robertnyman.com/2010/03/16/drop-shadow-with-css-for-all-web-browsers/
+    */
+
+    box-shadow: 10px 10px 5px #888;
+
+    /* Mozilla */
+    -moz-box-shadow: 10px 10px 5px #888;
+
+    /* Safari */
+    -webkit-box-shadow: 10px 10px 5px #888;
+
+    /*
+      IE drop-shadow.
+
+      See http://msdn.microsoft.com/en-us/library/ms533086(VS.85).aspx
+
+      Parameters are the same for IE 8 and previous versions of IE, but the
+      CSS tag is different.
+
+      Color: The color of the drop shadow
+      Strength: Width, in pixels
+      Direction: Direction of drop-shadow, in degrees
+    */
+
+    /* IE 8 */
+    /* NOTE: Appears to be broken in IE 8 when combined with sticky footer. */
+
+    /*
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=135, Color='#888888')";
+    */
+
+    /* IE 5.5 through IE 7 */ 
+    filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=135, Color='#888888')";
+
+}
+
